@@ -1,0 +1,29 @@
+{
+    "name": "quick_prime",
+    "version": "1.0.0",
+    "description": "Quickly determines if ANY valid js number is prime",
+    "main": "./dist/main.js",
+    "scripts": {
+        "start": "nf start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jrhii/quick_prime"
+    },
+    "keywords": [
+        "prime"
+    ],
+    "bugs": {
+        "url": "https://github.com/jacobgardner/monopoly-server/issues"
+    },
+    "author": "James R Harter II",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-preset-es2015": "^6.18.0",
+        "foreman": "^2.0.0",
+        "gulp": "^3.9.1",
+        "gulp-babel": "^6.1.2",
+        "gulp-sourcemaps": "^2.2.0",
+        "nodemon": "^1.11.0"
+    }
+}
