@@ -1,7 +1,7 @@
 {
   "name": "quick_prime",
   "version": "1.0.0",
-  "description": "Quickly determines if ANY valid js number is prime",
+  "description": "Quickly determines if a js number is prime",
   "main": "./dist/main.js",
   "scripts": {
     "start": "nf start"

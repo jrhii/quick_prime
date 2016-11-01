@@ -1,20 +1,31 @@
 import fs from 'fs';
 
-const MAX_INT = 9007199254740991;
+const MAX_INT = 1000000;
 const JSON_ARR_SIZE = 100000;
+const MAX_ARR_LENGTH = 9500;
 
-for (let p = 0; p < 1000000/JSON_ARR_SIZE; p++) {
+console.time("Log Primes")
+
+for (let i = 0; i <= MAX_INT; i++) {
+    const startPos = i;
     const primeArr = new Array();
 
-    for (let i = p * JSON_ARR_SIZE; i < JSON_ARR_SIZE * (p + 1); i++) {
+    while (primeArr.length < MAX_ARR_LENGTH) {
         if (isPrime(i)) {
             primeArr.push(i);
         }
+        if (i + 1 > MAX_INT) {
+            break;
+        }
+        i += 1;
+
     }
 
-    fs.writeFileSync(`./primes/primes_${JSON_ARR_SIZE * (p)}-${JSON_ARR_SIZE * (p + 1)}.json`, JSON.stringify(primeArr));
+    console.log(`Writing primes_${startPos}-${i}.json.  Length: ${primeArr.length}`);
+    fs.writeFileSync(`./primes/primes_${startPos}-${i}.json`, JSON.stringify(primeArr));
 }
 
+console.timeEnd("Log Primes");
 console.log('finished primeFind');
 
 //From: "https://www.codewars.com/kumite/55f54dd5cb6fff701600007b?sel=55f54e1acb6fff701600007d"
