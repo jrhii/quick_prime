@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const MAX_INT = 1000000;
+const MAX_INT = 3900000000;
 const JSON_ARR_SIZE = 100000;
 const MAX_ARR_LENGTH = 9500;
 
